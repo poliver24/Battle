@@ -1,30 +1,26 @@
-<head>
-<style>
-input[type=submit] {
-  background-color: red;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-div {
-  background-color: lightgrey;
-  width: 300px;
-  border: 15px solid red;
-  padding: 50px;
-  margin: 20px;
-}
-</style>
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-  <h1>BATTLE</h1>
-  <div>
+<link rel='stylesheet' href='style.css'>
+<div class="block">
+  <h1 class="h1">BATTLE</h1>
+  <h2 class="h2">Enter Your Players</h2>
   <form action="/names" method="post">
-    <input type="text" name="player_1_name">
-    <input type="text" name="player_2_name">
-    <input type="submit" value="Begin_game">
+  <br>
+  <label for="player_1_name">
+  <strong class="form_text">Player 1</strong>
+  <input class="form" type="text" name="player_1_name">
+  </label>
+  <br>
+  <br>
+  <label for="player_2_name">
+  <strong class="form_text">Player 2</strong>
+  <input type="text" name="player_2_name">
+  </label>
+  <br>
+  <br>
+  <input class="button" type="submit" value="Begin Game">
   </form>
 </div>
 </body>
+</html>
