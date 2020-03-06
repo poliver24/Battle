@@ -3,9 +3,20 @@
 <body>
 <link rel='stylesheet' href='style.css'>
 <div class="block">
-<%= @game.player_1.name %> attacked <%= @game.player_2.name %><br>
+  <div class="h2">
+   <strong> <%= @game.other_player.name%> attacked <%= @game.current_turn.name %></strong>
+   <br>
 
-<%= @game.player_2.name %>: <%= @game.player_2.hp %>HP
+
+    <%= @game.player_1.name %>: <%= @game.player_1.hp %>HP<br>
+    <%= @game.player_2.name %>: <%= @game.player_2.hp %>HP<br>
+
+    <%= @game.current_turn.name%>'s turn'
+  </div>
+  <br>
+  <form action="/attack" method="post">
+    <input class="button" type="submit" value="Attack">
+  </form>
 </div>
 </body>
 </html>

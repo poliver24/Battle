@@ -1,10 +1,13 @@
 require 'sinatra/base'
 require './lib/game'
 require './lib/player'
+require './helpers/attack_helper.rb'
+require './lib/attack'
 
 class Battle < Sinatra::Base
 
   enable :sessions
+  helpers AttackHelper
 
   get '/' do
     erb :index
@@ -22,10 +25,19 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  post '/attack' do
+    attack_redirect($game)
+  end
+  
   get '/attack' do
     @game = $game
-    @game.attack(@game.player_2)
+    @game.switch_turns
     erb :attack
+  end
+  
+  get '/game-over' do
+    @game = $game
+    erb :game_over
   end
 
   # start the server if ruby file executed directly

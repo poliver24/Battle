@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel='stylesheet' href='style.css'>
+<div class="block">
+  <div class="h2">
+    <strong><%= @game.winner.name%> Wins!!</strong>
+    <br>
+    <%= @game.loser.name%> Loses!
+  </div>
+  <br>
+  <form action="/">
+    <input class="button" type="submit" value="New Game">
+  </form>
+</div>
+</body>
+</html>
