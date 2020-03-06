@@ -1,7 +1,7 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(patrick, computer) }
+  subject(:game) { described_class.create(patrick, computer) }
   subject(:patrick) { double :patrick }
   subject(:computer) { double :computer }
 

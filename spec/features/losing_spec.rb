@@ -8,7 +8,8 @@ feature 'losing' do
 
     scenario 'Player 1 loses' do
       click_button 'Attack'
-      expect(page).to have_content 'Patrick loses!'
+      expect(page).to have_content 'Patrick Loses!'
+      expect(page).to have_content 'Computer Wins!!'
     end
     end
 end
